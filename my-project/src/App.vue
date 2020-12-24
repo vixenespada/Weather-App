@@ -3,12 +3,12 @@
     <main>
         <div class="search-box">
           <input type="text"  class="search-bar" placeholder="Buscar..." v-model="query" v-on:keypress="fetchWeather" />
-          {{ query }}
+          
         </div>
 
         <div class="weather-wrap" v-if="typeof weather.main != 'undefined'">
           <div class="location-box">
-            <div class="location">{{ weather.name }}, {{ weather.sys.country }}</div>
+            <div class="location">{{ weather.name }}, {{ weather.sys.city }}</div>
             <div class="date">{{ dateBuilder() }}</div>
           </div>
         </div>
